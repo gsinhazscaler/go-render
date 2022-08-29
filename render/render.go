@@ -51,7 +51,7 @@ var typeOfFloat = reflect.TypeOf(10.1)
 func Render(v interface{}) string {
 	buf := bytes.Buffer{}
 	s := (*traverseState)(nil)
-	s.render(&buf, 0, reflect.ValueOf(v), false)
+	s.render(&buf, 0, reflect.ValueOf(v), true)
 	return buf.String()
 }
 
